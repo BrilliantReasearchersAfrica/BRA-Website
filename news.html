@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Latest News from Brilliant Research Africa - Stay updated with our announcements and research">
+    <title>News & Blog - Brilliant Research Africa</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="icon" href="images/logo.jpg" type="image/png">
+</head>
+<body>
+    <div id="preloader">
+        <div class="loader"></div>
+    </div>
+    
+   <!-- Replace the header in ALL HTML files -->
+<header class="site-header">
+    <div class="nav-container">
+        <a href="index.html" class="logo">
+            <img src="images/logo.jpg" alt="Brilliant Research Africa" loading="lazy">
+             
+        </a>
+        
+        <nav class="main-nav">
+            <div class="nav-links">
+                <a href="index.html" class="nav-link"><i class="fas fa-home"></i> Home</a>
+                <a href="about.html" class="nav-link"><i class="fas fa-users"></i> About</a>
+                <a href="projects.html" class="nav-link"><i class="fas fa-project-diagram"></i> Projects</a>
+                <a href="news.html" class="nav-link"><i class="fas fa-newspaper"></i> News</a>
+                <a href="bootcamp.html" class="nav-link"><i class="fas fa-graduation-cap"></i> Bootcamp</a>
+                <a href="contact.html" class="nav-link"><i class="fas fa-envelope"></i> Contact</a>
+            </div>
+            <a href="careers.html" class="btn btn-sm btn-primary"><i class="fas fa-briefcase"></i> Careers</a>
+            
+            <button class="mobile-menu-toggle" aria-label="Toggle navigation">
+                <i class="fas fa-bars"></i>
+            </button>
+        </nav>
+    </div>
+</header>
+    
+    <main class="fade-in">
+        <section class="hero">
+            <h2>News & Blog</h2>
+            <p>Stay updated with our latest announcements, research findings, and stories from the field</p>
+        </section>
+        
+        <section>
+            <div class="card-grid">
+                <article class="card">
+                    <img src="images/bootcamp-announcement.jpg" alt="Innovation Bootcamp Announcement">
+                    <div class="card-content">
+                        <span class="news-date">June 15, 2025</span>
+                        <h3>BRA Launches Innovation Bootcamp 2025</h3>
+                        <p>We're excited to launch our 2025 Innovation Bootcamp. Applications are open until August 10. Young innovators across Africa are encouraged to apply for this intensive 8-week program!</p>
+                        <a href="bootcamp.html" class="btn">Learn More About Bootcamp</a>
+                    </div>
+                </article>
+                
+                <article class="card">
+                    <img src="images/research-paper.jpg" alt="New Research Publication">
+                    <div class="card-content">
+                        <span class="news-date">May 28, 2025</span>
+                        <h3>New Research: AI in African Agriculture</h3>
+                        <p>Our team has published groundbreaking research on the application of AI tools in small-scale farming across East Africa. The paper is now available in the Journal of African Technology.</p>
+                        <a href="#" class="btn">Read Research Summary</a>
+                    </div>
+                </article>
+                
+                <article class="card">
+                    <img src="images/partner-announcement.jpg" alt="New Partnership">
+                    <div class="card-content">
+                        <span class="news-date">April 10, 2025</span>
+                        <h3>BRA Partners with Tech Giants for EduTech Expansion</h3>
+                        <p>We're proud to announce a new partnership with leading technology companies to expand our EduTech project to 5 new countries in West Africa.</p>
+                        <a href="#" class="btn">Read Partnership Details</a>
+                    </div>
+                </article>
+            </div>
+            
+            <div class="newsletter">
+                <h3>Stay Updated</h3>
+                <p>Subscribe to our newsletter to receive the latest news directly in your inbox</p>
+                <form class="newsletter-form">
+                    <div class="form-group">
+                        <input type="email" placeholder="Your email address" required>
+                    </div>
+                    <button type="submit" class="btn btn-block">Subscribe</button>
+                </form>
+            </div>
+        </section>
+    </main>
+    
+    <footer class="fade-in">
+        <div class="social-links">
+            <a href="#"><i class="fab fa-facebook"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-linkedin"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+        </div>
+        <p><i class="fas fa-copyright"></i> 2025 Brilliant Research Africa. All rights reserved.</p>
+    </footer>
+    
+    <script>
+        window.addEventListener('load', function() {
+            const preloader = document.getElementById('preloader');
+            setTimeout(function() {
+                preloader.style.opacity = '0';
+                setTimeout(function() {
+                    preloader.style.display = 'none';
+                }, 500);
+            }, 500);
+        });
+        
+    // Mobile menu functionality
+    document.addEventListener('DOMContentLoaded', function() {
+        const menuToggle = document.querySelector('.mobile-menu-toggle');
+        const navLinks = document.querySelector('.nav-links');
+        
+        if (menuToggle && navLinks) {
+            menuToggle.addEventListener('click', () => {
+                navLinks.classList.toggle('active');
+                menuToggle.innerHTML = navLinks.classList.contains('active') ? 
+                    '<i class="fas fa-times"></i>' : '<i class="fas fa-bars"></i>';
+            });
+        }
+        
+        // Close menu when clicking on a link (mobile)
+        document.querySelectorAll('.nav-link').forEach(link => {
+            link.addEventListener('click', () => {
+                if (window.innerWidth <= 992 && navLinks) {
+                    navLinks.classList.remove('active');
+                    menuToggle.innerHTML = '<i class="fas fa-bars"></i>';
+                }
+            });
+        });
+    });
+
+    </script>
+</body>
+</html>

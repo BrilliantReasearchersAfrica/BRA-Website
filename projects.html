@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Our Projects at Brilliant Research Africa - Innovative solutions for Africa's challenges">
+    <title>Our Projects - Brilliant Research Africa</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="icon" href="images/logo.jpg" type="image/png">
+</head>
+<body>
+    <div id="preloader">
+        <div class="loader"></div>
+    </div>
+    
+    <header class="site-header">
+    <div class="nav-container">
+        <a href="index.html" class="logo">
+            <img src="images/logo.jpg" alt="Brilliant Research Africa" loading="lazy">
+             
+        </a>
+        
+        <nav class="main-nav">
+            <div class="nav-links">
+                <a href="index.html" class="nav-link"><i class="fas fa-home"></i> Home</a>
+                <a href="about.html" class="nav-link"><i class="fas fa-users"></i> About</a>
+                <a href="projects.html" class="nav-link"><i class="fas fa-project-diagram"></i> Projects</a>
+                <a href="news.html" class="nav-link"><i class="fas fa-newspaper"></i> News</a>
+                <a href="bootcamp.html" class="nav-link"><i class="fas fa-graduation-cap"></i> Bootcamp</a>
+                <a href="contact.html" class="nav-link"><i class="fas fa-envelope"></i> Contact</a>
+            </div>
+            <a href="careers.html" class="btn btn-sm btn-primary"><i class="fas fa-briefcase"></i> Careers</a>
+            
+            <button class="mobile-menu-toggle" aria-label="Toggle navigation">
+                <i class="fas fa-bars"></i>
+            </button>
+        </nav>
+    </div>
+</header>
+    
+    <main class="fade-in">
+        <section class="hero">
+            <h2>Our Innovative Projects</h2>
+            <p>Discover how we're solving Africa's most pressing challenges through research and technology</p>
+        </section>
+        
+        <section class="projects-section">
+            <div class="filter-controls">
+                <button class="filter-btn active" data-filter="all">All Projects</button>
+                <button class="filter-btn" data-filter="ongoing">Ongoing</button>
+                <button class="filter-btn" data-filter="completed">Completed</button>
+                <button class="filter-btn" data-filter="agriculture">Agriculture</button>
+                <button class="filter-btn" data-filter="education">Education</button>
+                <button class="filter-btn" data-filter="healthcare">Healthcare</button>
+            </div>
+            
+            <div class="project-grid">
+                <!-- AgroBoost Project -->
+                <div class="project-card" data-category="ongoing agriculture">
+                    <div class="project-badge">Featured Project</div>
+                    <img src="images/agroboost.jpg" alt="AgroBoost Project" loading="lazy">
+                    <div class="project-content">
+                        <div class="project-meta">
+                            <span class="status-badge ongoing">Ongoing</span>
+                            <span class="location"><i class="fas fa-map-marker-alt"></i> Rwanda</span>
+                        </div>
+                        <h3>AgroBoost: AI for Smallholder Farmers</h3>
+                        <div class="progress-container">
+                            <div class="progress-bar">
+                                <div class="progress" style="width: 65%"></div>
+                            </div>
+                            <span>65% complete • Launched Jan 2024</span>
+                        </div>
+                        <p class="project-description">Using AI to improve farming efficiency and yields in rural Rwanda. This project has already helped 500+ farmers increase their crop production by 30%.</p>
+                        <div class="project-footer">
+                            <a href="#" class="btn btn-outline">
+                                <i class="fas fa-file-alt"></i> Case Study
+                            </a>
+                            <a href="#" class="btn btn-primary">
+                                <i class="fas fa-donate"></i> Support
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- EduTech Project -->
+                <div class="project-card" data-category="completed education">
+                    <div class="project-badge">Success Story</div>
+                    <img src="images/edutech.jpg" alt="EduTech Project" loading="lazy">
+                    <div class="project-content">
+                        <div class="project-meta">
+                            <span class="status-badge completed">Completed</span>
+                            <span class="location"><i class="fas fa-map-marker-alt"></i> East Africa</span>
+                        </div>
+                        <h3>EduTech Africa Initiative</h3>
+                        <div class="project-stats">
+                            <div class="stat-item">
+                                <i class="fas fa-school"></i>
+                                <span>200+ schools equipped</span>
+                            </div>
+                            <div class="stat-item">
+                                <i class="fas fa-chalkboard-teacher"></i>
+                                <span>5,000+ teachers trained</span>
+                            </div>
+                        </div>
+                        <p class="project-description">Bridging the digital gap in schools across East Africa by providing affordable technology solutions and comprehensive teacher training programs.</p>
+                        <div class="project-footer">
+                            <a href="#" class="btn btn-outline">
+                                <i class="fas fa-file-pdf"></i> Final Report
+                            </a>
+                            <a href="#" class="btn btn-primary">
+                                <i class="fas fa-expand"></i> Expand Project
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- HealthLink Project -->
+                <div class="project-card" data-category="ongoing healthcare">
+                    <img src="images/healthlink.jpg" alt="HealthLink Project" loading="lazy">
+                    <div class="project-content">
+                        <div class="project-meta">
+                            <span class="status-badge ongoing">Ongoing</span>
+                            <span class="location"><i class="fas fa-map-marker-alt"></i> Rwanda & Kenya</span>
+                        </div>
+                        <h3>HealthLink Mobile Platform</h3>
+                        <div class="project-stats">
+                            <div class="stat-item">
+                                <i class="fas fa-clinic-medical"></i>
+                                <span>150+ clinics connected</span>
+                            </div>
+                            <div class="stat-item">
+                                <i class="fas fa-user-md"></i>
+                                <span>300+ healthcare workers</span>
+                            </div>
+                        </div>
+                        <p class="project-description">Enhancing access to medical data via mobile platforms, connecting rural clinics with urban hospitals for better patient outcomes through our offline-first solution.</p>
+                        <div class="project-footer">
+                            <a href="#" class="btn btn-outline">
+                                <i class="fas fa-mobile-alt"></i> Try Demo
+                            </a>
+                            <a href="#" class="btn btn-primary">
+                                <i class="fas fa-heartbeat"></i> Impact Stories
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- SolarFarm Project -->
+                <div class="project-card" data-category="ongoing energy">
+                    <img src="images/solarfarm.jpg" alt="SolarFarm Project" loading="lazy">
+                    <div class="project-content">
+                        <div class="project-meta">
+                            <span class="status-badge ongoing">Ongoing</span>
+                            <span class="location"><i class="fas fa-map-marker-alt"></i> Tanzania</span>
+                        </div>
+                        <h3>Community SolarFarm</h3>
+                        <div class="progress-container">
+                            <div class="progress-bar">
+                                <div class="progress" style="width: 40%"></div>
+                            </div>
+                            <span>40% complete • Launched Sep 2023</span>
+                        </div>
+                        <p class="project-description">Developing sustainable solar energy solutions for rural communities, providing clean electricity to 10 villages in northern Tanzania.</p>
+                        <div class="project-footer">
+                            <a href="#" class="btn btn-outline">
+                                <i class="fas fa-solar-panel"></i> Tech Specs
+                            </a>
+                            <a href="#" class="btn btn-primary">
+                                <i class="fas fa-lightbulb"></i> Sponsor
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- FinLit Project -->
+                <div class="project-card" data-category="completed education">
+                    <img src="images/finlit.jpg" alt="Financial Literacy Project" loading="lazy">
+                    <div class="project-content">
+                        <div class="project-meta">
+                            <span class="status-badge completed">Completed</span>
+                            <span class="location"><i class="fas fa-map-marker-alt"></i> Uganda</span>
+                        </div>
+                        <h3>Financial Literacy Program</h3>
+                        <div class="project-stats">
+                            <div class="stat-item">
+                                <i class="fas fa-users"></i>
+                                <span>15,000+ trained</span>
+                            </div>
+                            <div class="stat-item">
+                                <i class="fas fa-piggy-bank"></i>
+                                <span>3,000+ savings groups</span>
+                            </div>
+                        </div>
+                        <p class="project-description">Empowering women and youth with financial management skills through our mobile learning platform and community workshops.</p>
+                        <div class="project-footer">
+                            <a href="#" class="btn btn-outline">
+                                <i class="fas fa-chart-line"></i> Results
+                            </a>
+                            <a href="#" class="btn btn-primary">
+                                <i class="fas fa-book"></i> Curriculum
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- CleanWater Project -->
+                <div class="project-card" data-category="ongoing health">
+                    <div class="project-badge">Pilot Phase</div>
+                    <img src="images/cleanwater.jpg" alt="Clean Water Project" loading="lazy">
+                    <div class="project-content">
+                        <div class="project-meta">
+                            <span class="status-badge ongoing">Ongoing</span>
+                            <span class="location"><i class="fas fa-map-marker-alt"></i> Malawi</span>
+                        </div>
+                        <h3>Clean Water Initiative</h3>
+                        <div class="progress-container">
+                            <div class="progress-bar">
+                                <div class="progress" style="width: 25%"></div>
+                            </div>
+                            <span>25% complete • Launched Mar 2025</span>
+                        </div>
+                        <p class="project-description">Developing affordable water purification systems for rural communities, aiming to provide clean drinking water to 50,000 people.</p>
+                        <div class="project-footer">
+                            <a href="#" class="btn btn-outline">
+                                <i class="fas fa-tint"></i> Technology
+                            </a>
+                            <a href="#" class="btn btn-primary">
+                                <i class="fas fa-hand-holding-water"></i> Donate
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <footer class="fade-in">
+        <div class="social-links">
+            <a href="#"><i class="fab fa-facebook"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-linkedin"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+        </div>
+        <p><i class="fas fa-copyright"></i> 2025 Brilliant Research Africa. All rights reserved.</p>
+    </footer>
+    
+    <script>
+        // Preloader Functionality
+        window.addEventListener('load', function() {
+            const preloader = document.getElementById('preloader');
+            setTimeout(function() {
+                preloader.style.opacity = '0';
+                setTimeout(function() {
+                    preloader.style.display = 'none';
+                }, 500);
+            }, 500);
+        });
+
+        // Mobile Menu Toggle
+        const menuToggle = document.querySelector('.mobile-menu-toggle');
+        const navLinks = document.querySelector('.nav-links');
+        if (menuToggle && navLinks) {
+            menuToggle.addEventListener('click', () => {
+                navLinks.classList.toggle('active');
+            });
+        }
+
+        // Project Filtering Functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const filterBtns = document.querySelectorAll('.filter-btn');
+            const projectCards = document.querySelectorAll('.project-card');
+
+            filterBtns.forEach(btn => {
+                btn.addEventListener('click', function() {
+                    // Remove active class from all buttons
+                    filterBtns.forEach(btn => btn.classList.remove('active'));
+                    // Add active class to clicked button
+                    this.classList.add('active');
+                    
+                    const filterValue = this.getAttribute('data-filter');
+                    
+                    projectCards.forEach(card => {
+                        if (filterValue === 'all') {
+                            card.style.display = 'block';
+                        } else {
+                            if (card.getAttribute('data-category').includes(filterValue)) {
+                                card.style.display = 'block';
+                            } else {
+                                card.style.display = 'none';
+                            }
+                        }
+                    });
+                });
+            });
+        });
+        
+    // Mobile menu functionality
+    document.addEventListener('DOMContentLoaded', function() {
+        const menuToggle = document.querySelector('.mobile-menu-toggle');
+        const navLinks = document.querySelector('.nav-links');
+        
+        if (menuToggle && navLinks) {
+            menuToggle.addEventListener('click', () => {
+                navLinks.classList.toggle('active');
+                menuToggle.innerHTML = navLinks.classList.contains('active') ? 
+                    '<i class="fas fa-times"></i>' : '<i class="fas fa-bars"></i>';
+            });
+        }
+        
+        // Close menu when clicking on a link (mobile)
+        document.querySelectorAll('.nav-link').forEach(link => {
+            link.addEventListener('click', () => {
+                if (window.innerWidth <= 992 && navLinks) {
+                    navLinks.classList.remove('active');
+                    menuToggle.innerHTML = '<i class="fas fa-bars"></i>';
+                }
+            });
+        });
+    });
+
+    </script>
+</body>
+</html>

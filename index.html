@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Brilliant Research Africa - Empowering African innovation through research and technology">
+    <title>Home - Brilliant Research Africa</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="icon" href="images/logo.jpg" type="image/png">
+</head>
+<body>
+    <div id="preloader">
+        <div class="loader"></div>
+    </div>
+    
+    <!-- Replace the header in ALL HTML files -->
+<header class="site-header">
+    <div class="nav-container">
+        <a href="index.html" class="logo logo-text">
+    <img src="images/logo.jpg" alt="Brilliant Research Africa" loading="lazy">
+     <span>BRA</span>
+</a>
+
+        
+        <nav class="main-nav">
+            <div class="nav-links">
+                <a href="index.html" class="nav-link"><i class="fas fa-home"></i> Home</a>
+                <a href="about.html" class="nav-link"><i class="fas fa-users"></i> About</a>
+                <a href="projects.html" class="nav-link"><i class="fas fa-project-diagram"></i> Projects</a>
+                <a href="news.html" class="nav-link"><i class="fas fa-newspaper"></i> News</a>
+                <a href="bootcamp.html" class="nav-link"><i class="fas fa-graduation-cap"></i> Bootcamp</a>
+                <a href="contact.html" class="nav-link"><i class="fas fa-envelope"></i> Contact</a>
+            </div>
+            <a href="careers.html" class="btn btn-sm btn-primary"><i class="fas fa-briefcase"></i> Careers</a>
+            
+            <button class="mobile-menu-toggle" aria-label="Toggle navigation">
+                <i class="fas fa-bars"></i>
+            </button>
+        </nav>
+    </div>
+</header>
+    
+    <main class="fade-in">
+        <section class="hero">
+            <h2>Empowering African Innovation Through Research</h2>
+            <p>Driving socio-economic transformation across the continent by enabling impactful research and innovation.</p>
+            <a href="about.html" class="btn">Learn More About Us</a>
+        </section>
+        
+        <section>
+            <h2>Welcome to Brilliant Research Africa</h2>
+            <p>Brilliant Research Africa (BRA) is a Pan-African innovation and research hub focused on empowering youth and communities through technology, research, and entrepreneurship.</p>
+            
+            <h3>Featured Projects</h3>
+            <div class="card-grid">
+                <div class="card">
+                    <img src="images/agroboost.jpg" alt="AgroBoost Project">
+                    <div class="card-content">
+                        <h4>AgroBoost</h4>
+                        <span class="project-tag tag-ongoing">Ongoing</span>
+                        <span class="project-tag">Agriculture</span>
+                        <p>Using AI to improve farming in rural Rwanda.</p>
+                        <a href="projects.html" class="btn">View Project</a>
+                    </div>
+                </div>
+                
+                <div class="card">
+                    <img src="images/edutech.jpg" alt="EduTech Project">
+                    <div class="card-content">
+                        <h4>EduTech</h4>
+                        <span class="project-tag tag-completed">Completed</span>
+                        <span class="project-tag">Education</span>
+                        <p>Bridging the digital gap in schools across East Africa.</p>
+                        <a href="projects.html" class="btn">View Project</a>
+                    </div>
+                </div>
+                
+                <div class="card">
+                    <img src="images/healthlink.jpg" alt="HealthLink Project">
+                    <div class="card-content">
+                        <h4>HealthLink</h4>
+                        <span class="project-tag tag-ongoing">Ongoing</span>
+                        <span class="project-tag">Healthcare</span>
+                        <p>Enhancing access to medical data via mobile platforms.</p>
+                        <a href="projects.html" class="btn">View Project</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <footer class="fade-in">
+        <div class="social-links">
+            <a href="#"><i class="fab fa-facebook"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-linkedin"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+        </div>
+        <p><i class="fas fa-copyright"></i> 2025 Brilliant Research Africa. All rights reserved.</p>
+    </footer>
+    
+    <script>
+        window.addEventListener('load', function() {
+            const preloader = document.getElementById('preloader');
+            setTimeout(function() {
+                preloader.style.opacity = '0';
+                setTimeout(function() {
+                    preloader.style.display = 'none';
+                }, 500);
+            }, 500);
+        });
+        
+    // Mobile menu functionality
+    document.addEventListener('DOMContentLoaded', function() {
+        const menuToggle = document.querySelector('.mobile-menu-toggle');
+        const navLinks = document.querySelector('.nav-links');
+        
+        if (menuToggle && navLinks) {
+            menuToggle.addEventListener('click', () => {
+                navLinks.classList.toggle('active');
+                menuToggle.innerHTML = navLinks.classList.contains('active') ? 
+                    '<i class="fas fa-times"></i>' : '<i class="fas fa-bars"></i>';
+            });
+        }
+        
+        // Close menu when clicking on a link (mobile)
+        document.querySelectorAll('.nav-link').forEach(link => {
+            link.addEventListener('click', () => {
+                if (window.innerWidth <= 992 && navLinks) {
+                    navLinks.classList.remove('active');
+                    menuToggle.innerHTML = '<i class="fas fa-bars"></i>';
+                }
+            });
+        });
+    });
+
+    </script>
+</body>
+</html>
