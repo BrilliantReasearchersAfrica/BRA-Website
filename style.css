@@ -1212,40 +1212,43 @@ textarea:focus {
 .modal-body strong {
     color: #003366;
 }
-/* Make collaborator logos very small */
-.collaborators-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr)); /* Compact grid cells */
-    gap: 10px; /* Minimal gap */
-    padding: 10px 0;
+/* Clean List-Style Collaborators */
+.collaborators-list {
+    list-style: none;
+    padding: 0;
+    max-width: 800px;
+    margin: 20px auto;
 }
 
-.collaborator-logo {
-    max-width: 50px !important; /* Force very small size */
-    height: auto;
-    margin-bottom: 5px;
-    filter: grayscale(100%) opacity(0.8); /* Optional: subtle muted effect */
+.collaborators-list li {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 8px 0;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.tiny-logo {
+    width: 30px !important; /* Forces small size */
+    height: 30px !important;
+    object-fit: contain;
+    filter: grayscale(100%) opacity(0.8);
     transition: all 0.3s ease;
 }
 
-.collaborator-logo:hover {
-    filter: grayscale(0%) opacity(1); /* Full color on hover */
-    transform: scale(1.05);
-}
-
-.collaborator-name {
-    font-size: 0.7rem !important; /* Tiny text */
-    line-height: 1.2;
-    margin-top: 3px;
-    color: #555; /* Subdued color */
+.collaborators-list li:hover .tiny-logo {
+    filter: grayscale(0%) opacity(1);
+    transform: scale(1.1);
 }
 
 /* Mobile responsiveness */
 @media (max-width: 600px) {
-    .collaborators-grid {
-        grid-template-columns: repeat(3, 1fr); /* 3 columns on mobile */
+    .collaborators-list li {
+        gap: 10px;
+        font-size: 0.9rem;
     }
-    .collaborator-logo {
-        max-width: 40px !important; /* Even smaller on mobile */
+    .tiny-logo {
+        width: 25px !important;
+        height: 25px !important;
     }
 }
