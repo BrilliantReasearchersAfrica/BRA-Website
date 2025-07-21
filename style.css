@@ -1212,3 +1212,31 @@ textarea:focus {
 .modal-body strong {
     color: #003366;
 }
+/* Add this to your style.css file */
+.collaborator-logo {
+    max-width: 100px; /* Adjust this value to make logos smaller or larger */
+    height: auto;
+    margin-bottom: 10px;
+    transition: transform 0.3s ease;
+}
+
+.collaborators-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 20px;
+    justify-items: center;
+    align-items: center;
+    padding: 20px 0;
+}
+
+.collaborator-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.collaborator-name {
+    font-size: 0.9rem;
+    margin-top: 5px;
+}
