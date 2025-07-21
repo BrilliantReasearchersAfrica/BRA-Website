@@ -1212,31 +1212,40 @@ textarea:focus {
 .modal-body strong {
     color: #003366;
 }
-/* Add this to your style.css file */
-.collaborator-logo {
-    max-width: 100px; /* Adjust this value to make logos smaller or larger */
-    height: auto;
-    margin-bottom: 10px;
-    transition: transform 0.3s ease;
-}
-
+/* Make collaborator logos very small */
 .collaborators-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-    gap: 20px;
-    justify-items: center;
-    align-items: center;
-    padding: 20px 0;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr)); /* Compact grid cells */
+    gap: 10px; /* Minimal gap */
+    padding: 10px 0;
 }
 
-.collaborator-item {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
+.collaborator-logo {
+    max-width: 50px !important; /* Force very small size */
+    height: auto;
+    margin-bottom: 5px;
+    filter: grayscale(100%) opacity(0.8); /* Optional: subtle muted effect */
+    transition: all 0.3s ease;
+}
+
+.collaborator-logo:hover {
+    filter: grayscale(0%) opacity(1); /* Full color on hover */
+    transform: scale(1.05);
 }
 
 .collaborator-name {
-    font-size: 0.9rem;
-    margin-top: 5px;
+    font-size: 0.7rem !important; /* Tiny text */
+    line-height: 1.2;
+    margin-top: 3px;
+    color: #555; /* Subdued color */
+}
+
+/* Mobile responsiveness */
+@media (max-width: 600px) {
+    .collaborators-grid {
+        grid-template-columns: repeat(3, 1fr); /* 3 columns on mobile */
+    }
+    .collaborator-logo {
+        max-width: 40px !important; /* Even smaller on mobile */
+    }
 }
